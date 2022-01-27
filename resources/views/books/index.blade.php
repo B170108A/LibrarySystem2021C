@@ -35,6 +35,10 @@
                                                 </th>
                                                 <th scope="col"
                                                     class="p6 py-3 text-left text-gray-500 uppercase tracking-wider">
+                                                    Book Image
+                                                </th>
+                                                <th scope="col"
+                                                    class="p6 py-3 text-left text-gray-500 uppercase tracking-wider">
                                                     Book SKU
                                                 </th>
                                                 <th scope="col"
@@ -43,9 +47,17 @@
                                                 </th>
                                                 <th scope="col"
                                                     class="p6 py-3 text-left text-gray-500 uppercase tracking-wider">
+                                                    Book Category
+                                                </th>
+                                                <th scope="col"
+                                                    class="p6 py-3 text-left text-gray-500 uppercase tracking-wider">
                                                     Book Price
                                                 </th>
-                                                <th scope="col" class="relative p6 py-3">
+                                                <th scope="col"
+                                                    class="p6 py-3 text-left text-gray-500 uppercase tracking-wider">
+                                                    Action
+                                                </th>
+                                                {{-- <th scope="col" class="relative p6 py-3">
                                                     <span class="sr-only">View</span>
                                                 </th>
                                                 <th scope="col" class="relative p6 py-3">
@@ -53,7 +65,7 @@
                                                 </th>
                                                 <th scope="col" class="relative p6 py-3">
                                                     <span class="sr-only">Delete</span>
-                                                </th>
+                                                </th> --}}
                                             </tr>
                                         </thead>
                                         <tbody class="bg-white divide-y divide-gray-200">
@@ -78,7 +90,17 @@
                                                 </td>
                                                 <td class="p6 py-4 whitespace-nowrap">
                                                     <div class="text-sm font-medium text-gray-900">
+                                                        <img src="images/{{ $book->imageBook }}" alt="" width="150" >
+                                                    </div>
+                                                </td>
+                                                <td class="p6 py-4 whitespace-nowrap">
+                                                    <div class="text-sm font-medium text-gray-900">
                                                         {{ $book->nameBook }}
+                                                    </div>
+                                                </td>
+                                                <td class="p6 py-4 whitespace-nowrap">
+                                                    <div class="text-sm font-medium text-gray-900">
+                                                        {{ $book->categoryBook }}
                                                     </div>
                                                 </td>
                                                 <td class="p6 py-4 whitespace-nowrap">
@@ -92,8 +114,8 @@
                                                 </td> --}}
                                                 <td class="p6 py-4 whitespace-nowrap text-right text-sm font-medium">
                                                     <div>
-                                                        {{-- <a href="{{ route('books.show',$book->id) }}"
-                                                            class="text-indigo-600 hover:text-indigo-900">View</a> --}}
+                                                        <a href="{{ route('books.show',['book'=>$book->id]) }}"
+                                                            class="text-indigo-600 hover:text-indigo-900">View</a>
                                                     </div>
                                                 </td>
                                                 <td class="p6 py-4 whitespace-nowrap text-right text-sm font-medium">

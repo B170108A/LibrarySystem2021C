@@ -4,12 +4,10 @@
         <div class="maw-7xl mauto sm:p6 lg:p8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200 container">
-                    {{-- <validation-errors />
 
-                    <success-message /> --}}
                     <auth-validation-errors class="mb-4" :errors="$errors" />
 
-                    <form method="POST" action="{{ route('books.store') }}">
+                    <form method="POST" action="{{ route('books.store') }}" enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
 
@@ -39,7 +37,7 @@
                                     <input id="descriptionBook" class="block mt-1 w-full" type="text" name="descriptionBook" placeholder="Description" autofocus />
                                 </div>
                                 <br>
-                                <div class="form-group">
+                                {{-- <div class="form-group">
                                     <label for="Category">Category</label>
                                     <select name="CategoryID" id="CategoryID" class="form-control">
                                         @foreach($categoryID as $category)
@@ -47,7 +45,7 @@
                                         @endforeach
                                     </select>
                                     </div>
-                                <br>
+                                <br> --}}
                                 <div>
                                     <label for="quantityBook">Books Quantity In</label>
                                     <br>
@@ -64,6 +62,11 @@
                                     <label for="publisherBook">Book Publisher</label>
                                     <br>
                                     <input id="publisherBook" class="block mt-1 w-full" type="text" name="publisherBook" placeholder="Brand" autofocus />
+                                </div>
+                                <div>
+                                    <label for="imageBook">Upload Image : </label>
+                                    <br>
+                                    <input id="imageBook" class="block mt-1 w-full" type="file" name="imageBook" placeholder="Upload Image : " autofocus />
                                 </div>
                             </div>
                         </div>

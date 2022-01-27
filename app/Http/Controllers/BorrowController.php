@@ -1,11 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Category;
-use App\Models\add;
+
+use App\Models\Borrow;
 use Illuminate\Http\Request;
 
-class AddController extends Controller
+class BorrowController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class AddController extends Controller
      */
     public function index()
     {
-        return view('add');
+        return view('borrow.index');
     }
 
     /**
@@ -24,8 +24,7 @@ class AddController extends Controller
      */
     public function create()
     {
-        $category = Category::all();
-        return view('books.create',compact('category'));
+        return view('borrow.create');
     }
 
     /**
@@ -42,10 +41,10 @@ class AddController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\add  $add
+     * @param  \App\Models\Borrow  $borrow
      * @return \Illuminate\Http\Response
      */
-    public function show(add $add)
+    public function show(Borrow $borrow)
     {
         //
     }
@@ -53,10 +52,10 @@ class AddController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\add  $add
+     * @param  \App\Models\Borrow  $borrow
      * @return \Illuminate\Http\Response
      */
-    public function edit(add $add)
+    public function edit(Borrow $borrow)
     {
         //
     }
@@ -65,10 +64,10 @@ class AddController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\add  $add
+     * @param  \App\Models\Borrow  $borrow
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, add $add)
+    public function update(Request $request, Borrow $borrow)
     {
         //
     }
@@ -76,10 +75,10 @@ class AddController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\add  $add
+     * @param  \App\Models\Borrow  $borrow
      * @return \Illuminate\Http\Response
      */
-    public function destroy(add $add)
+    public function destroy(Borrow $borrow)
     {
         //
     }

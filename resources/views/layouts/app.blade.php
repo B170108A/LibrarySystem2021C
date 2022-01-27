@@ -46,7 +46,10 @@
                                     <a class="nav-link" href="{{ url('add') }}">{{ __('Add') }}</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{url('myprofile')}}">{{ __('My Profile') }}</a>
+                                    <a class="nav-link" href="{{ url('myprofile')}}">{{ __('My Profile') }}</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ url('borrow') }}">{{ __('Borrow') }}</a>
                                 </li>
                             @endif
                     </ul>

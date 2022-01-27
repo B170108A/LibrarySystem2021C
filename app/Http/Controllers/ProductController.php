@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Product;
+use App\Models\book;
 use Symfony\Component\HttpFoundation\Session\Session;
 use App\Models\Category;
 
@@ -30,12 +31,12 @@ class ProductController extends Controller
 
     public function view(){
         //$viewProduct=Product::all();
-        $showProduct = DB::all();
+        $showProduct = Product::all();
         // $viewProduct=DB::table('products');
         // ->leftjoin('categories','categories.id','=','products.CategoryID')
         // ->select('products.*','categories.name as catName')
         // ->get();
-        return view('showProduct')->with($showProduct);
+        return view('showProduct',compact('p'));
     }
 
     public function edit($id){

@@ -73,8 +73,15 @@ Route::get('/add', function () {
 Route::get('/books', [App\Http\Controllers\BookController::class, 'index'])->name('books.index');
 Route::get('/books/create',[App\Http\Controllers\BookController::class, 'create'])->name('books.create');
 Route::put('/books/store',[App\Http\Controllers\BookController::class, 'store'])->name('books.store');
+Route::get('/books/show/{book}',[App\Http\Controllers\BookController::class, 'detail'])->name('books.show');
+Route::post('books/update',[App\Http\Controllers\BookController::class,'update'])->name('books.update');
 
 //My Profile
 Route::get('/myprofile', function () {
     return view('myprofile');
 });
+
+//Borrow
+
+Route::get('/borrow', [App\Http\Controllers\BorrowController::class, 'index'])->name('borrow.index');
+Route::get('/borrow/create',[App\Http\Controllers\BorrowController::class, 'create'])->name('borrow.create');
